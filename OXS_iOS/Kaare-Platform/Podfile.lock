@@ -1,0 +1,27 @@
+PODS:
+  - AGAsyncTestHelper (0.2.2)
+  - GDataXML-HTML (1.2.0)
+  - OHHTTPStubs (3.1.7):
+    - OHHTTPStubs/Core (= 3.1.7)
+  - OHHTTPStubs/Core (3.1.7)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - AGAsyncTestHelper (~> 0.2.2)
+  - GDataXML-HTML (~> 1.1)
+  - OHHTTPStubs (~> 3.1.5)
+  - ReactiveCocoa (~> 2.3.1)
+
+SPEC CHECKSUMS:
+  AGAsyncTestHelper: 5d50910d1dcb4ef97252a7a7c15cc2998bf9de73
+  GDataXML-HTML: 3aa8f4200dd461d0a95d812397cebd6a2c98953f
+  OHHTTPStubs: b571bd884ce1ebdbda850ea41674b9fbb9eba667
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+
+COCOAPODS: 0.35.0

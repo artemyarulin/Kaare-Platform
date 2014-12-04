@@ -1,0 +1,14 @@
+target 'Kaare-Platform' do
+
+pod 'ReactiveCocoa', '~> 2.3.1'
+pod 'GDataXML-HTML', '~> 1.1'
+
+end
+
+target 'Kaare-PlatformTests' do
+
+pod 'OHHTTPStubs', '~> 3.1.5'
+pod 'AGAsyncTestHelper', '~> 0.2.2'
+
+end
+
