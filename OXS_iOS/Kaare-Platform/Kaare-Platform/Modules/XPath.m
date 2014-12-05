@@ -25,7 +25,87 @@
 
 +(id)wrapXPathResult:(GDataXMLNode*)node
 {
-    return [node stringValue];
+    switch (node.kind) {
+        case GDataXMLInvalidKind:
+        {
+            return nil;
+        }
+        case GDataXMLDocumentKind:
+        {
+            return nil;
+        }
+        case GDataXMLElementKind:
+        {
+            return [XPath wrapNodeToDicionary:node];
+        }
+        case GDataXMLAttributeKind:
+        {
+            return [node stringValue];
+        }
+        case GDataXMLNamespaceKind:
+        {
+            return nil;
+        }
+        case GDataXMLProcessingInstructionKind:
+        {
+            return nil;
+        }
+        case GDataXMLCommentKind:
+        {
+            return nil;
+        }
+        case GDataXMLTextKind:
+        {
+            return nil;
+        }
+        case GDataXMLDTDKind:
+        {
+            return nil;
+        }
+        case GDataXMLEntityDeclarationKind:
+        {
+            return nil;
+        }
+        case GDataXMLAttributeDeclarationKind:
+        {
+            return nil;
+        }
+        case GDataXMLElementDeclarationKind:
+        {
+            return nil;
+        }
+        case GDataXMLNotationDeclarationKind:
+        {
+            return nil;
+        }
+    }
+    
+    [NSException raise:@"NotSupportNodeType" format:@"Current XML node type is unsupported"];
+    return nil;
+}
+
++(NSDictionary*)wrapNodeToDicionary:(GDataXMLNode*)node
+{
+    NSMutableDictionary* attributes = [@{} mutableCopy];
+    if ([node isKindOfClass:GDataXMLElement.class])
+    {
+        [((GDataXMLElement*)node).attributes enumerateObjectsUsingBlock:^(GDataXMLElement* attr, NSUInteger idx, BOOL *stop) {
+            attributes[attr.name] = [attr stringValue];
+        }];
+    }
+
+    NSMutableArray* childrens = [@[] mutableCopy];
+    [node.children enumerateObjectsUsingBlock:^(GDataXMLNode* child, NSUInteger idx, BOOL *stop) {
+        if (child.kind != GDataXMLTextKind) // We cover node content separatly as a value
+            [childrens addObject:[XPath wrapNodeToDicionary:child]];
+    }];
+    
+    return @{
+             @"name": [node name],
+             @"value": [node stringValue],
+             @"attributes": attributes,
+             @"children": childrens
+           };
 }
 
 @end
