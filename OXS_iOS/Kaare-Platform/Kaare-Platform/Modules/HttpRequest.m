@@ -5,11 +5,10 @@
 +(RACSignal*)httpRequest:(NSString*)url options:(NSDictionary*)options
 {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        
         NSURLSession* session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.ephemeralSessionConfiguration];
-        NSMutableURLRequest* request = [HttpRequest requestFromOptions:options];
+        NSMutableURLRequest* request = [HttpRequest requestFromOptions:options url:url];
         
-        [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSURLSessionDataTask* task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             if (error)
                 [subscriber sendError:error];
             else
@@ -19,14 +18,17 @@
             }
         }];
         
+        [task resume];
         return nil;
     }];
 }
 
-+(NSMutableURLRequest*)requestFromOptions:(NSDictionary*)options
++(NSMutableURLRequest*)requestFromOptions:(NSDictionary*)options url:(NSString*)url
 {
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] init];
+
     request.HTTPMethod = (options[@"method"] ?: @"GET");
+    request.URL = [NSURL URLWithString:url];
 
     if (options[@"headers"])
         for (NSString* headerName in options[@"headers"]) {
@@ -41,7 +43,7 @@
 
 +(NSDictionary*)wrapResponse:(NSData*)data response:(NSURLResponse*)response options:(NSDictionary*)options
 {
-    return @{@"data": [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding],
+    return @{@"body": [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding],
              @"headers" : ((NSHTTPURLResponse*)response).allHeaderFields,
              @"statusCode" : @(((NSHTTPURLResponse*)response).statusCode) };
 }
