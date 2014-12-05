@@ -1,7 +1,3 @@
-@interface Kaare : NSObject // Temporary here
-
-@end
-
 @interface KaarePlatform : NSObject
 
 -(RACSignal*)httpRequest:(NSString*)url;

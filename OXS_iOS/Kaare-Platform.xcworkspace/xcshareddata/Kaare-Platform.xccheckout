@@ -10,15 +10,19 @@
 	<string>Kaare-Platform</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1025B2D64CFBC710D5EF4E6BA847F16BBB002DD8</key>
+		<string>https://github.com/artemyarulin/Kaare.git</string>
 		<key>A9B10BE23D6CE315B13BA1BE279E451ECE97441B</key>
 		<string>https://github.com/artemyarulin/Kaare-Platform.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OXS_iOS/Kaare-Platform/Kaare-Platform.xcworkspace</string>
+	<string>OXS_iOS/Kaare-Platform.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1025B2D64CFBC710D5EF4E6BA847F16BBB002DD8</key>
+		<string>../../../Kaare</string>
 		<key>A9B10BE23D6CE315B13BA1BE279E451ECE97441B</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/artemyarulin/Kaare-Platform.git</string>
@@ -28,6 +32,14 @@
 	<string>A9B10BE23D6CE315B13BA1BE279E451ECE97441B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1025B2D64CFBC710D5EF4E6BA847F16BBB002DD8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Kaare</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

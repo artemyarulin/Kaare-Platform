@@ -2,10 +2,6 @@
 #import "HttpRequest.h"
 #import "XPath.h"
 
-@implementation Kaare
-
-@end
-
 @implementation Kaare (KaarePlatform)
 
 +(KaarePlatform*)platform
