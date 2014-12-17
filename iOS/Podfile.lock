@@ -1,13 +1,13 @@
 PODS:
   - AGAsyncTestHelper (0.2.2)
   - GDataXML-HTML (1.2.0)
-  - JSCoreBom (1.0.0)
-  - Kaare (0.0.1):
+  - JSCoreBom (1.1.1)
+  - Kaare (0.0.2):
     - JSCoreBom (~> 1.0)
     - ReactiveCocoa (~> 2.3.1)
-  - OHHTTPStubs (3.1.7):
-    - OHHTTPStubs/Core (= 3.1.7)
-  - OHHTTPStubs/Core (3.1.7)
+  - OHHTTPStubs (3.1.8):
+    - OHHTTPStubs/Core (= 3.1.8)
+  - OHHTTPStubs/Core (3.1.8)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI (= 2.3.1)
   - ReactiveCocoa/Core (2.3.1):
@@ -19,25 +19,26 @@ PODS:
 DEPENDENCIES:
   - AGAsyncTestHelper (~> 0.2.2)
   - GDataXML-HTML (~> 1.1)
-  - Kaare (from `https://github.com/artemyarulin/Kaare.git`)
+  - Kaare (from `https://github.com/artemyarulin/Kaare.git`, commit `9d229cdac2e62aa2e37b0c5b76109138c10a2016`)
   - OHHTTPStubs (~> 3.1.5)
   - ReactiveCocoa (~> 2.3.1)
 
 EXTERNAL SOURCES:
   Kaare:
+    :commit: 9d229cdac2e62aa2e37b0c5b76109138c10a2016
     :git: https://github.com/artemyarulin/Kaare.git
 
 CHECKOUT OPTIONS:
   Kaare:
-    :commit: 6b8e149ddc78baf66ea666041b0d49849e32683d
+    :commit: 9d229cdac2e62aa2e37b0c5b76109138c10a2016
     :git: https://github.com/artemyarulin/Kaare.git
 
 SPEC CHECKSUMS:
   AGAsyncTestHelper: 5d50910d1dcb4ef97252a7a7c15cc2998bf9de73
   GDataXML-HTML: 3aa8f4200dd461d0a95d812397cebd6a2c98953f
-  JSCoreBom: 186f248b769408af185d80c342097f2e76a53c31
-  Kaare: 25608196c8e453ec5ece3a8f8de39fd40e15906a
-  OHHTTPStubs: b571bd884ce1ebdbda850ea41674b9fbb9eba667
+  JSCoreBom: 7917ae5ca9f8177729fea1efe40de46a218b9c2a
+  Kaare: 34323ced9f71683e918d95877e346af92f6ec329
+  OHHTTPStubs: 2e25ea33e4163e5c458fe600d9ed412a85b2aeaf
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
 
 COCOAPODS: 0.35.0
