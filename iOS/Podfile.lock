@@ -19,18 +19,18 @@ PODS:
 DEPENDENCIES:
   - AGAsyncTestHelper (~> 0.2.2)
   - GDataXML-HTML (~> 1.1)
-  - Kaare (from `https://github.com/artemyarulin/Kaare.git`, commit `9d229cdac2e62aa2e37b0c5b76109138c10a2016`)
+  - Kaare (from `https://github.com/artemyarulin/Kaare.git`, commit `e824aa18321eb888434a2ac76261d74c1dff8431`)
   - OHHTTPStubs (~> 3.1.5)
   - ReactiveCocoa (~> 2.3.1)
 
 EXTERNAL SOURCES:
   Kaare:
-    :commit: 9d229cdac2e62aa2e37b0c5b76109138c10a2016
+    :commit: e824aa18321eb888434a2ac76261d74c1dff8431
     :git: https://github.com/artemyarulin/Kaare.git
 
 CHECKOUT OPTIONS:
   Kaare:
-    :commit: 9d229cdac2e62aa2e37b0c5b76109138c10a2016
+    :commit: e824aa18321eb888434a2ac76261d74c1dff8431
     :git: https://github.com/artemyarulin/Kaare.git
 
 SPEC CHECKSUMS:

@@ -1,3 +1,5 @@
+#import "Kaare.h"
+
 @interface KaarePlatform : NSObject
 
 -(instancetype)initWithKaare:(Kaare*)kaare;

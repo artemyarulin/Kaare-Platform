@@ -33,7 +33,7 @@
     };
     
     [context evaluateScript:[NSString stringWithFormat:@"platform.httpRequest('http://example.com').subscribe(function(resp){ onResponse(resp)},null,function(){ done()})"]];
-    if (!isDone) WAIT_WHILE(!isDone,1);
+    if (!isDone) WAIT_WHILE(!isDone,2);
     
 
     XCTAssertEqual([output[@"statusCode"] intValue], expectedStatusCode, @"Status code shoud be right");

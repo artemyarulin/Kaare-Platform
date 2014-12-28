@@ -1,5 +1,5 @@
 #import "XPath.h"
-#import "GDataXmlNode.h"
+#import <GDataXMLNode.h>
 
 @implementation XPath
 
