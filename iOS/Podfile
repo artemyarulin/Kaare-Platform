@@ -2,15 +2,15 @@ target 'Kaare-Platform' do
 
 pod 'ReactiveCocoa', '~> 2.3.1'
 pod 'GDataXML-HTML', '~> 1.1'
-pod 'Kaare', :git => 'https://github.com/artemyarulin/Kaare.git', :commit => 'e824aa18321eb888434a2ac76261d74c1dff8431'
-
+pod 'Kaare', '~> 1.0.0'
 end
 
 target 'Kaare-PlatformTests' do
 
 pod 'OHHTTPStubs', '~> 3.1.5'
 pod 'AGAsyncTestHelper', '~> 0.2.2'
-pod 'Kaare', :git => 'https://github.com/artemyarulin/Kaare.git', :commit => 'e824aa18321eb888434a2ac76261d74c1dff8431'
+pod 'Kaare', '~> 1.0.0'
+pod 'JSCoreBom', '~>1.1.1'
 
 end
 
